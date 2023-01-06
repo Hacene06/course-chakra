@@ -48,9 +48,6 @@ const App = () => {
     </Routes>
   </Router>
   </GridItem>
-  <GridItem pl='2' bg='blue.300' area={'footer'}>
-    Footer
-  </GridItem>
 </Grid >
 
    

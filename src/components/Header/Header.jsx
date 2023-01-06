@@ -1,15 +1,18 @@
 import React from 'react';
-import { Box, Flex, HStack, IconButton, Menu, MenuButton, MenuDivider, MenuItem, MenuList, Spacer, Text, useColorModeValue, VStack } from '@chakra-ui/react';
+import { Box, Flex, HStack, IconButton, Input, Link, Menu, MenuButton, MenuDivider, MenuItem, MenuList, Spacer, Text, useColorModeValue, VStack } from '@chakra-ui/react';
 import { FiBell, FiChevronDown, FiUser } from 'react-icons/fi';
 //import { Test } from './Header.styles';
 
 const Header = (props) => (
-  <HStack spacing={{ base: '0', md: '6' }}>
+  <Box as="header" position="fixed" w="100%" zIndex={10}>
+     <HStack spacing={{ base: '0', md: '6' }} bg='gray.50'  as="nav" padding={1}>
     <Flex h="20" alignItems="center" mx="8" justifyContent="space-between">
     <Text fontSize="2xl" fontFamily="monospace" fontWeight="bold">
           DIGITALIZONE
         </Text>
       </Flex>
+      <Spacer />
+      <Input placeholder='Search your courses here' />
       <Spacer />
   <IconButton
     size="lg"
@@ -48,11 +51,13 @@ const Header = (props) => (
         <MenuItem>Settings</MenuItem>
         <MenuItem>Billing</MenuItem>
         <MenuDivider />
-        <MenuItem>Sign out</MenuItem>
+        <Link href='/courses'><MenuItem >Sign out</MenuItem></Link>
       </MenuList>
     </Menu>
   </Flex>
 </HStack>
+  </Box>
+ 
 );
 
 Header.propTypes = {
