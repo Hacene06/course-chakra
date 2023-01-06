@@ -20,7 +20,7 @@ const App = () => {
 
   return (
     <Router>
-      <Navbar />
+      <Navbar setToken={setToken} />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="*" element={<NotFound />} />
