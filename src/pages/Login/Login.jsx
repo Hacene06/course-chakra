@@ -48,6 +48,7 @@ const Login = ({ setToken }) => {
         <Heading color="teal.400">Welcome</Heading>
         <Box minW={{ base: "90%", md: "468px" }}>
           <form onSubmit={()=>{
+            setToken('aaaa')
             console.log('les valeur sont ', username, '\\\\', password);
             if(username && password){
               console.log('ikchem');
